@@ -1,0 +1,35 @@
+{
+    "version": "0.1.0",
+    "description": "Expose the terminal's background, foreground and colour scheme as environment variables",
+    "homepage": "https://github.com/mopi1402/terminal-scheme-info",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/mopi1402/terminal-scheme-info/releases/download/v0.1.0/terminal-scheme-info-0.1.0-x86_64-pc-windows-msvc.zip",
+            "hash": "b496f2e88dc11589407e428ef4ba882b5d66f596bc0a20b298e9d44be12c72e8",
+            "extract_dir": "terminal-scheme-info-0.1.0-x86_64-pc-windows-msvc"
+        },
+        "arm64": {
+            "url": "https://github.com/mopi1402/terminal-scheme-info/releases/download/v0.1.0/terminal-scheme-info-0.1.0-aarch64-pc-windows-msvc.zip",
+            "hash": "8f6c74f473fdd7ae18fa06e5b2484bf90396c35643409b6351ddc4bac3d8e7c4",
+            "extract_dir": "terminal-scheme-info-0.1.0-aarch64-pc-windows-msvc"
+        }
+    },
+    "bin": "terminal-scheme-info.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/mopi1402/terminal-scheme-info/releases/download/v$version/terminal-scheme-info-$version-x86_64-pc-windows-msvc.zip",
+                "extract_dir": "terminal-scheme-info-$version-x86_64-pc-windows-msvc"
+            },
+            "arm64": {
+                "url": "https://github.com/mopi1402/terminal-scheme-info/releases/download/v$version/terminal-scheme-info-$version-aarch64-pc-windows-msvc.zip",
+                "extract_dir": "terminal-scheme-info-$version-aarch64-pc-windows-msvc"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS"
+        }
+    }
+}
